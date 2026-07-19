@@ -34,9 +34,9 @@ the two agree.
 
 ## 3. Change contact info
 
-Phone, email, and the Facebook link appear in the footer of every page and on
-`contact.html`. Search for `585-729-8781`, `foxmeadowgoldens@gmail.com`, or the
-Facebook URL and update as needed.
+Email and the Facebook link appear in the footer of every page and on
+`contact.html`. Search for `foxmeadowgoldens@gmail.com` or the Facebook URL and
+update as needed.
 
 ---
 

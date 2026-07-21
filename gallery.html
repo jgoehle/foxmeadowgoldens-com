@@ -10,6 +10,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
+  <link rel="canonical" href="https://foxmeadowgoldens.com/gallery.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:title" content="Gallery | Fox Meadow English Cream Goldens">
+  <meta property="og:description" content="Photos of our English Cream Golden Retrievers and past litters at Fox Meadow in Spencerport, New York.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://foxmeadowgoldens.com/gallery.html">
+  <meta property="og:site_name" content="Fox Meadow English Cream Goldens">
+  <meta property="og:image" content="https://foxmeadowgoldens.com/images/297217473_125051166911435_3986856135159464982_n.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
 
@@ -39,7 +48,7 @@
 <section class="section" style="padding-top:6px">
   <div class="wrap">
     <!-- GALLERY: to add photos, drop image files into the /images folder and add a line like:
-         <a href="/images/YOUR-FILE.jpg"><img loading="lazy" src="/images/YOUR-FILE.jpg" alt="Fox Meadow Golden"></a> -->
+         <a href="/images/YOUR-FILE.jpg"><img loading="lazy" src="/images/YOUR-FILE.jpg" alt="Fox Meadow Golden" decoding="async"></a> -->
     <div class="gallery" id="gallery">
       <a href="/images/litter-picture-scaled.jpg"><img loading="lazy" src="/images/litter-picture-scaled.jpg" alt="Fox Meadow English Cream Golden Retriever"></a>
       <a href="/images/218857018_4825844177431395_8302918133354201489_n.jpg"><img loading="lazy" src="/images/218857018_4825844177431395_8302918133354201489_n.jpg" alt="Fox Meadow English Cream Golden Retriever"></a>
@@ -127,7 +136,7 @@
 <div class="lb" id="lb">
   <button class="close" id="lbClose" aria-label="Close">&times;</button>
   <button class="nav-btn prev" id="lbPrev" aria-label="Previous">&#8249;</button>
-  <img id="lbImg" src="" alt="">
+  <img id="lbImg" src="" alt="" loading="lazy" decoding="async">
   <button class="nav-btn next" id="lbNext" aria-label="Next">&#8250;</button>
 </div>
 

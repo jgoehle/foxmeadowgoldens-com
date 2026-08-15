@@ -7,7 +7,8 @@
   --cream:#faf6ee;
   --cream-2:#f3ead9;
   --gold:#c69a3f;
-  --gold-deep:#a97e26;
+  --gold-deep:#8f6b20;   /* AA on cream/white */
+  --gold-btn:#92712e;    /* button fill w/ white text (AA) */
   --brown:#3f3222;
   --brown-soft:#6b5c46;
   --green:#5f6f52;
@@ -54,7 +55,7 @@ img{max-width:100%;display:block;}
 /* ---------- Buttons ---------- */
 .btn{
   display:inline-block;
-  background:var(--gold);
+  background:var(--gold-btn);
   color:#fff;
   padding:14px 26px;
   border-radius:999px;
@@ -64,10 +65,10 @@ img{max-width:100%;display:block;}
   transition:transform .15s ease, background .15s ease;
   border:none;cursor:pointer;
 }
-.btn:hover{background:var(--gold-deep);text-decoration:none;transform:translateY(-2px);}
+.btn:hover{background:#7d6028;text-decoration:none;transform:translateY(-2px);}
 .btn.secondary{background:#fff;color:var(--brown);border:2px solid var(--cream-2);}
 .btn.secondary:hover{background:var(--cream-2);color:var(--brown);}
-.btn.fb{background:#1877f2;}
+.btn.fb{background:#1772e8;color:#fff;}
 .btn.fb:hover{background:#0f5ecb;}
 .btn-row{display:flex;gap:14px;flex-wrap:wrap;}
 .center .btn-row{justify-content:center;}
@@ -87,7 +88,7 @@ img{max-width:100%;display:block;}
 .brand:hover{text-decoration:none;}
 .brand .mark{
   width:42px;height:42px;border-radius:50%;
-  background:var(--gold);color:#fff;display:grid;place-items:center;
+  background:var(--gold-btn);color:#fff;display:grid;place-items:center;
   font-weight:700;font-size:1.1rem;box-shadow:var(--shadow-sm);flex:none;
 }
 .brand small{display:block;font-family:"Nunito Sans",sans-serif;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep);font-weight:700;}
@@ -96,9 +97,9 @@ img{max-width:100%;display:block;}
   color:var(--brown);font-weight:600;padding:8px 14px;border-radius:999px;font-size:.98rem;
 }
 .nav-links a:hover{background:var(--cream-2);text-decoration:none;}
-.nav-links a.active{background:var(--gold);color:#fff;}
+.nav-links a.active{background:var(--gold-btn);color:#fff;}
 .nav-toggle{display:none;}
-.hamburger{display:none;cursor:pointer;padding:8px;border-radius:10px;}
+.hamburger{display:none;cursor:pointer;padding:8px;border-radius:10px;background:none;border:0;line-height:0;}
 .hamburger span{display:block;width:24px;height:2px;background:var(--brown);margin:5px 0;border-radius:2px;transition:.2s;}
 
 /* ---------- Hero ---------- */
@@ -113,7 +114,7 @@ img{max-width:100%;display:block;}
 .hero .overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(35,26,14,.72) 0%,rgba(35,26,14,.42) 45%,rgba(35,26,14,.15) 100%);}
 .hero .hero-inner{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;padding:60px 22px;color:#fff;width:100%;}
 .hero h1{color:#fff;max-width:14ch;text-shadow:0 2px 20px rgba(0,0,0,.35);}
-.hero .kicker{display:inline-block;background:var(--gold);color:#fff;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.75rem;padding:7px 15px;border-radius:999px;margin-bottom:18px;}
+.hero .kicker{display:inline-block;background:var(--gold-btn);color:#fff;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.75rem;padding:7px 15px;border-radius:999px;margin-bottom:18px;}
 .hero p{color:#fdf7ec;font-size:1.25rem;max-width:44ch;text-shadow:0 1px 12px rgba(0,0,0,.4);}
 
 /* ---------- Status banner ---------- */
@@ -198,9 +199,9 @@ form textarea{min-height:130px;resize:vertical;}
 .site-footer{background:var(--brown);color:#efe6d4;padding:56px 0 30px;margin-top:20px;}
 .site-footer a{color:#f0d79a;}
 .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;}
-.site-footer h4{color:#fff;font-size:1.15rem;}
+.site-footer :is(h2,h3,h4){color:#fff;font-size:1.15rem;}
 .site-footer .brand{color:#fff;}
-.site-footer .brand .mark{background:var(--gold);}
+.site-footer .brand .mark{background:var(--gold-btn);}
 .site-footer ul{list-style:none;padding:0;margin:0;}
 .site-footer li{margin-bottom:8px;}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.14);margin-top:40px;padding-top:20px;font-size:.9rem;color:#c9bda6;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
@@ -224,7 +225,7 @@ form textarea{min-height:130px;resize:vertical;}
     display:none;border-bottom:1px solid rgba(198,154,63,.22);
   }
   .nav-links a{padding:12px 14px;border-radius:10px;}
-  .nav-toggle:checked ~ .nav-links{display:flex;}
+  .nav-links.open{display:flex;}
   .hamburger{display:block;}
   .grid.two,.grid.three,.res-list{grid-template-columns:1fr;}
   .photo-strip{grid-template-columns:1fr 1fr;}
@@ -232,3 +233,41 @@ form textarea{min-height:130px;resize:vertical;}
   .footer-grid{grid-template-columns:1fr;}
   .status{padding:26px;}
 }
+
+/* ---------- Accessibility: skip link ---------- */
+.skip-link{position:absolute;left:-9999px;top:0;z-index:1000;padding:12px 18px;
+  background:#fff;color:#111;font-weight:700;text-decoration:none;
+  border:2px solid currentColor;border-radius:0 0 8px 0}
+.skip-link:focus{left:0}
+:focus-visible{outline:3px solid currentColor;outline-offset:2px}
+
+.h-card{font-size:1.3rem;}
+
+/* Footer brand mark sits on brown: lighten the sub-label to meet AA. */
+.site-footer .brand small{color:#b29a67}
+.site-footer a:not(.btn){color:#e0cfa4}
+.site-footer a:not(.btn):hover{color:#f0e5c9}
+
+/* Links inside running text must not rely on colour alone (WCAG 1.4.1). */
+p a, .prose li a, blockquote a, figcaption a, .form-note a{text-decoration:underline}
+.btn, .nav-links a, .site-footer nav a{text-decoration:none}
+
+.site-footer .footer-bottom a, .site-footer-bottom a, footer span a{text-decoration:underline}
+
+/* Buttons keep their own colour wherever they sit, including the dark footer. */
+.site-footer .btn, .site-footer .btn.fb{color:#fff}
+
+/* ---------- Responsive safety net ----------
+   Grid and flex children default to min-width:auto, so a wide child (a long word,
+   a nowrap label, a fixed-width image) can force a track wider than the viewport
+   and scroll the whole page sideways. These caps stop that at the source. */
+.grid-2 > *, .grid-3 > *, .form-grid > *, .hero__grid > *,
+[class*="-grid"] > * { min-width: 0; }
+img, video, iframe, table { max-width: 100%; }
+input, select, textarea { max-width: 100%; box-sizing: border-box; }
+select { width: 100%; }
+pre, code { overflow-wrap: anywhere; }
+
+/* Two-up field rows must stack on narrow screens. */
+.pair-grid { display: grid; grid-template-columns: 1fr 1fr; }
+@media (max-width: 560px) { .pair-grid { grid-template-columns: 1fr; } }

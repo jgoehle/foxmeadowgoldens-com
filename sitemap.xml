@@ -2,32 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://foxmeadowgoldens.com/</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-08-15</lastmod>
   </url>
   <url>
-    <loc>https://foxmeadowgoldens.com/about.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://foxmeadowgoldens.com/about</loc>
+    <lastmod>2026-08-15</lastmod>
   </url>
   <url>
-    <loc>https://foxmeadowgoldens.com/contact.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://foxmeadowgoldens.com/contact</loc>
+    <lastmod>2026-08-15</lastmod>
   </url>
   <url>
-    <loc>https://foxmeadowgoldens.com/gallery.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://foxmeadowgoldens.com/gallery</loc>
+    <lastmod>2026-08-15</lastmod>
   </url>
   <url>
-    <loc>https://foxmeadowgoldens.com/puppies.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://foxmeadowgoldens.com/privacy</loc>
+    <lastmod>2026-08-15</lastmod>
+  </url>
+  <url>
+    <loc>https://foxmeadowgoldens.com/puppies</loc>
+    <lastmod>2026-08-15</lastmod>
   </url>
 </urlset>

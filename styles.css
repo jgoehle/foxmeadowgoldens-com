@@ -271,3 +271,11 @@ pre, code { overflow-wrap: anywhere; }
 /* Two-up field rows must stack on narrow screens. */
 .pair-grid { display: grid; grid-template-columns: 1fr 1fr; }
 @media (max-width: 560px) { .pair-grid { grid-template-columns: 1fr; } }
+
+/* ---------- Intrinsic image dimensions: preserve aspect ratio ----------
+   The width/height attributes we set to stop layout shift are also
+   presentational hints, so a CSS rule that sets only `width` leaves the
+   attribute height in force and squashes the image. :where() gives this
+   zero specificity, so it overrides the presentational hint but still
+   loses to any real rule that sets height on purpose. */
+:where(img[width][height]) { height: auto; }
